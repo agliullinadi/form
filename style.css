@@ -1,0 +1,307 @@
+.page {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(back.jpg);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* ФОРМА */
+.form {
+    position: absolute;
+    left: 399px;
+    top: 87px;
+    box-sizing: border-box;
+    width: 600px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.329);
+    border-radius: 20px;
+    color: #787878;
+    padding-right: 45px;
+    padding-left: 46px;
+    padding-bottom: 26px;
+}
+
+.form__logo {
+    width: 40%;
+    padding-top: 20px;
+}
+
+.form__title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding-bottom: 5px;
+    margin: 0;
+    color: rgb(121, 121, 121);
+}
+
+/* ИНПУТЫ */
+.inputs {
+    background: #FFFFFF;
+    border: 2px solid #787878;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: block;
+    font-size: 28px;
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    margin-bottom: 13px;
+}
+
+.inputs::placeholder  {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: black;
+}
+
+.form__name,
+.form__surname,
+.form__email,
+.form__password {
+    position: relative;
+}
+
+/* КАСТОМНЫЙ ЧЕКБОКС */
+.form__checkbox {
+    position: relative;
+    width: fit-content;
+    display: flex;
+}
+
+.form__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.form__label {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-left: 8px;
+    margin-bottom: 3px;
+}
+
+.form__checkbox-mark {
+    width: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 2px solid #787878;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.form__checkbox-label {
+    padding-left: 10px;
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.form__checkbox-link {
+    color: #787878;
+}
+
+
+.form__checkbox>input:checked+.form__checkbox-mark::after {
+    content: '✓';
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 1px;
+    left: 6px;
+    font-weight: bold;
+}
+
+/* ЗВЕЗДЫ */
+
+.form__email::before,
+.form__surname::before,
+.form__password::before,
+.form__name::before {
+    content: "*";
+    color: #787878;
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    left: 0;
+    top: 0;
+}
+
+
+.form__checkbox::before {
+    content: "*";
+    color: #787878;
+    width: 7px;
+    height: 12px;
+    position: absolute;
+    left: -12px;
+    top: 2px;
+}
+
+
+/* КНОПКА */
+
+.form__button {
+    margin-top: 52px;
+    text-align: center;
+    
+}
+
+.button {
+    background-color: #3219bbe0;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    line-height: 16px;
+    padding: 18px 55px;
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* ОШИБКИ */
+.error1,
+.error2,
+.error3,
+.error5,
+.error6,
+.error7  {
+    position: relative;
+    width: 200px;
+    height: 16px;
+    left: 0;
+    top: -10px;
+    display: none;
+}
+
+.error4 {
+    position: relative;
+    width: 300px;
+    height: 16px;
+    left: 0;
+    top: -10px;
+    display: none;
+}
+
+.error__text {
+    color: #CB2424;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.form__label_error {
+    color: #CB2424;
+
+}
+
+.form__error_border {
+    border: 2px solid #CB2424;
+}
+
+
+.form__input_error::before {
+    color: #CB2424;
+
+}
+
+
+.error_block {
+    display: block;
+}
+
+/* MEDIA */
+
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .form {
+        width: calc(100% - 40px);
+        min-width: 320px;
+        left: 20px;
+        top: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    .form {
+        width: calc(100% - 40px);
+        min-width: 320px;
+        left: 20px;
+        top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .form__title {
+        font-size: 60px;
+    }
+
+    .button {
+        padding: 32px 64px;
+    }
+
+    .form__label {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .form__checkbox-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    .form__checkbox-label {
+        font-size: 18px;
+    }
+
+    .form__checkbox>input:checked+.form__checkbox-mark::after {
+        top: 5px;
+        left: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .form {
+        width: calc(100% - 40px);
+        min-width: 320px;
+        left: 20px;
+        top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .form__title {
+        font-size: 30px;
+    }
+
+    .button {
+        padding: 18px 32px;
+    }
+
+    .form__label {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .form__checkbox-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    .form__checkbox-label {
+        font-size: 18px;
+    }
+
+    .form__checkbox>input:checked+.form__checkbox-mark::after {
+        top: 5px;
+        left: 3px;
+    }
+}
+
+
