@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Форма регистрации</title>
+</head>
+<body class="page">
+  <!-- ФОРМА -->
+    <div class="form">
+        <img src="logo.png" alt="Логотип Элекдрон" class="form__logo">
+        <h1 class="form__title">Регистрация</h1>
+        <form class="form__container" action="" novalidate>
+          <!-- ИМЯ -->
+            <div class="form__name">
+                <label for="name-input" class="form__label form__label-name">Имя</label>
+                <input
+                  name="name"
+                  placeholder="Иван"
+                  type="text"
+                  id="name-input"
+                  class="form__name-input inputs"
+                  required
+                />
+              </div>
+              <div class="error6">
+                <p class="error__text">Поле обязательно для заполнения</p>
+              </div>
+
+            <!-- ФАМИЛИЯ -->
+            <div class="form__surname">
+                <label for="surname-input" class="form__label form__label-surname">Фамилия</label>
+                <input
+                  name="surname"
+                  placeholder="Иванов"
+                  type="text"
+                  id="surname-input"
+                  class="form__surname-input inputs"
+                  required
+                />
+              </div>
+              <div class="error7">
+                <p class="error__text">Поле обязательно для заполнения</p>
+              </div>
+
+              <!-- ПОЛ -->
+              <div class="form__gender">
+                <label class="form__label form__label-gender">Пол</label>
+                <select class="form__gender-list inputs">
+                    <option label value="">Пол не выбран</option>
+                    <option class="form__gender-item" value="Женский">Женский</option>
+                    <option class="form__gender-item" value="Мужской">Мужской</option>
+                  </select>
+              </div>
+            
+              <!-- ДЕНЬ РОЖДЕНИЯ -->
+              <div class="form__birthday">
+                <label for="birthday-input" class="form__label form__label-birthday">Дата рождения</label>
+                <input
+                  name="birthday"
+                  type="date"
+                  id="birthday-input"
+                  class="form__birthday-input inputs"
+                  required
+                />
+              </div>
+
+              <!-- ГОРОД -->
+              <div class="form__city">
+                <label class="form__label form__label-city">Город</label>
+                <select class="form__gender-list inputs" name="city">
+                  <option label value="">Город не выбран</option>
+                  <option value="1">Екатеринбург</option>
+                  <option value="2">Казань</option>	
+                  <option value="3">Москва</option>	
+                  <option value="4">Уфа</option>	
+                  <option value="5">Челябинск</option>	
+                </select>
+              </div>
+              
+          <!-- EMAIL -->
+          <div class="form__email">
+            <label for="email-input" class="form__label form__label-email">E-mail</label>
+            <input
+              name="email"
+              placeholder="ivanov@google.com"
+              type="email"
+              id="email-input"
+              class="form__email-input inputs"
+              required
+            />
+          </div>
+          <div class="error1">
+            <p class="error__text">Поле обязательно для заполнения</p>
+          </div>
+          <div class="error2">
+            <p class="error__text">Email невалидный</p>
+          </div>
+
+          <!-- ПАРОЛЬ -->
+          <div class="form__password">
+            <label for="password-input" class="form__label form__label-password">Пароль</label>
+            <input
+              placeholder="Введите пароль"
+              type="password"
+              id="password-input"
+              class="form__password-input inputs"
+              required
+            />
+          </div>
+          <div class="error3">
+            <p class="error__text">Поле обязательно для заполнения</p>
+          </div>
+          <div class="error4">
+            <p class="error__text">
+              Пароль должен содержать как минимум 8 символов
+            </p>
+          </div>
+
+          <!-- СОГЛАШЕНИЕ -->
+          <div class="form__checkbox">
+            <input
+              type="checkbox"
+              id="checkbox-input"
+              class="form__checkbox-input inputs"
+            />
+            <div class="form__checkbox-mark"></div>
+            <label for="checkbox-input" class="form__checkbox-label">Я согласен c
+              <a
+                href="https://www.google.com/"
+                class="form__checkbox-link"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                >Правилами пользования приложением</a>
+            </label>
+          </div>
+          <div class="error5">
+            <p class="error__text">Поле обязательно для заполнения</p>
+          </div>
+
+          <!-- КНОПКА РЕГИСТРАЦИИ -->
+          <div class="form__button">
+            <button type="submit" class="button">Регистрация</button>
+          </div>
+        </form>
+      </div>
+</body>
+</html>
